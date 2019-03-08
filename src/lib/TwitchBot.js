@@ -245,7 +245,7 @@ class TwitchBot {
    * @return {[none]} [description]
    */
   GiftSubAlert() {
-    this._client.on('subgift', (channel, username, recipient) => {
+    this._client.on('subgift', (channel, username, userstate, recipient) => {
       if (Config.enableCustomMessages) {
         const giftSubAlertMessages =
           Config.customMessages[channel].giftsubscriptions;
